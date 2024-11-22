@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.google.com/specimen/Klee+One?query=Klee+One&categoryFilters=Feeling:%2FExpressive%2FCute;Calligraphy:%2FScript%2FHandwritten">
+</head>
+<body>
+
+  <!-- Contenido de la página -->
+  <header>
+    <div class="menu">
+    <div id="btn1">
+      <a href="#" target="_blank">Inicio</a>
+    </div>
+    <div id="btn2">
+      <a href="#" target="_blank">Información</a>
+    </div>
+    <div id="btn3">
+      <a href="#" target="_blank">Formulario</a>
+    </div></div>
+  </header>
+  
+  <div class="tab">
+    <div class="active">
+      <div id="tab1">
+      <h1>Inicio</h1>
+      <p>Hola mi nombre es José Antonio Martínez y esta es la práctica evaluable 1 de HLC</p>
+    </div></div>
+
+        <div id="tab2">
+          <h1>Información</h1>
+    <p>El examen de HLC consta de las siguientes partes:</p>
+    <ul>
+        <li>Un menú lateral</li>
+        <li>Un formulario</li>
+        <li>Varios elementos de HTML como:
+            <ul type="circle">
+                <li>Títulos</li>
+                <li>Imágenes</li>
+                <li>Listas</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Algunos datos importantes de la práctica son:</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Forma de entrega</th>
+                <th>Tiempo</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Github y github Pages</td>
+                <td>2 horas</td>
+                <td>Numérica</td>
+            </tr>
+        </tbody>
+    </table>
+
+        </div>
+        <div id="tab3"> </div></div>
+      
+  <!-- Fin contenido de la página -->
+
+  <script>
+    function showTabById(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => {
+        tab.classList.toggle('active', tab.id === tabId);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.menu button');
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const tabId = button.id.replace('btn', 'tab');
+          showTabById(tabId);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

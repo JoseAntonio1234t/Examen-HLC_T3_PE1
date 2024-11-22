@@ -1,0 +1,46 @@
+.tab{
+    display: none;
+}
+
+.tab :active{
+    display: block;
+}
+
+header{
+justify-content: space-between;
+min-height: 100vh;
+background-color: #4476a8;
+margin-right: 80%;
+align-items: center;
+justify-content: center;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    align-items: center;
+justify-content: center;
+display: flex;
+background-color: #4987c5;
+padding: 15px;
+margin-right: 5%;
+margin-left: 5%;
+margin-bottom: 5%;
+border-radius: 5%;
+}
+.menu a:hover{
+background-color: #1abc9c;
+transition: cubic-bezier(0.19, 1, 0.22, 1);
+transition-duration: 2s;
+}
+
+
+
+img{
+    height: 300x;
+    width: 400px;
+    border-radius: 5%;
+}
+thead{
+    background-color: #1abc9c;
+    color: white;
+}
